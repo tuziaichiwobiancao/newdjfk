@@ -46,6 +46,11 @@ class HomeController extends BaseController
      */
     public function index(Request $request)
     {
+
+
+        //dump(json_decode('[[{"text":"为自己充值","callback_data":"recharge_my"},{"text":"为他人充值","callback_data":"recharge_other"}]]',true));exit();
+        //send_goods("SM0KHSV8FP9ZE2XK");exit();
+        //phpinfo();exit();
         $goods = $this->goodsService->withGroup();
         return $this->render('static_pages/home', ['data' => $goods], __('dujiaoka.page-title.home'));
     }
@@ -117,19 +122,6 @@ class HomeController extends BaseController
      */
     public function install(Request $request)
     {
-        //echo PHP_VERSION;exit();
-        if(7.4 > (float)PHP_VERSION || 7.5 < (float)PHP_VERSION){
-            die("请安装php7.4");
-        }
-        $bool = false;
-        foreach (get_loaded_extensions() as $item){
-            if($item == "SourceGuardian"){
-                $bool = true;
-            }
-        }
-        if(!$bool){
-            die("宝塔用户请在/www/server/php/74/etc/php.ini 最后一行添加 extension = ".$_SERVER['DOCUMENT_ROOT']."/extend/ixed.lin 然后重启php服务");
-        }
         return view('common/install');
     }
 

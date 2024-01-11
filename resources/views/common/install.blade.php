@@ -685,10 +685,10 @@ TkSuQmCC" />
         </svg>
 
     </h1>
-    <h2>独角数卡魔改版 「{{ config('dujiaoka.dujiaoka_version') }}」</h2>
+    <h2>独角数卡 「{{ config('dujiaoka.dujiaoka_version') }}」</h2>
     <div>
 
-        <p>每个梦想的路上，一起前行....！
+        <p>安装redis,fileinfo扩展,删除proc_open函数<br/>
             <a href="https://t.me/+v16BXiiwU4U5ZjEx" id="qq-group-link" target="_blank">
                 👉🏻加入Telegram交流群
             </a>
@@ -800,6 +800,7 @@ TkSuQmCC" />
                                 scrollTop: 0
                             }, 500);
                         });
+
                     return false;
                 });
             });

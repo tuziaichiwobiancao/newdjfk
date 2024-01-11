@@ -22,4 +22,10 @@ Route::group([
     $router->get('import-carmis', 'CarmisController@importCarmis');
     $router->get('system-setting', 'SystemSettingController@systemSetting');
     $router->get('email-test', 'EmailTestController@emailTest');
+    $router->resource('button', 'ButtonController');
+    $router->resource('button', 'ButtonController');
+    $router->resource('recharge', 'RechargeController');
+    $router->resource('prime', 'PrimeController');
+    $router->resource('message', 'MessageController');
+    $router->resource('users', 'UserController');
 });

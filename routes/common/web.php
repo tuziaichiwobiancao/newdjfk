@@ -32,6 +32,8 @@ Route::group(['middleware' => ['dujiaoka.boot'],'namespace' => 'Home'], function
     Route::post('search-order-by-email', 'OrderController@searchOrderByEmail');
     // 通过浏览器查询
     Route::post('search-order-by-browser', 'OrderController@searchOrderByBrowser');
+    // api获取所有商品
+    Route::get('api', 'ApiController@get_goods');
 });
 
 Route::group(['middleware' => ['install.check'],'namespace' => 'Home'], function () {
@@ -44,6 +46,7 @@ Route::group(['middleware' => ['install.check'],'namespace' => 'Home'], function
 Route::group(['middleware' => ['dujiaoka.boot'],'namespace' => 'Bot'], function () {
     // 通过浏览器查询
     Route::post('webhook', 'HomeController@index');
+    Route::get('get', 'HomeController@get');
     Route::post('epnotify', 'HomeController@epnotify');
     Route::post('send', 'HomeController@sendp');
     Route::get('test', 'HomeController@test');

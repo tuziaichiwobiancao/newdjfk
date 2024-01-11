@@ -16,6 +16,8 @@ return [
         'order_push_setting' => '订单推送配置',
         'geetest' => '极验验证',
         'botset' => '机器人设置',
+        'prime'       => '自助开通会员设置',
+        'license'       => '授权管理',
     ],
 
     'fields' => [
@@ -60,14 +62,27 @@ return [
         'geetest_id' => '极验id',
         'geetest_key' => '极验key',
         'is_open_geetest' => '是否开启极验',
+
+
         'bottoken'      => '机器人token',
         'huilv'      => '强制EPUSDT汇率',
-        'token'      => '授权码https://t.me/fksqBot可获取授权码'
+        'token'      => '授权码https://t.me/fksqBot可获取授权码',
+        'imgapi'      => '二维码图片api接口地址',
+
+
+        'hash'        => 'fragment的hash值',
+        'cookie'      => 'fragment的cookie值',
+        'charge'      => '收费设置',
+        'apiurl'      => 'api地址',
+
+        'licenses'      => '授权密钥',
+        'username'      => 'TG用户名',
     ],
     'options' => [
     ],
     'rule_messages' => [
         'save_system_setting_success' => '系统配置保存成功！',
+        'set_webhook_error' => '自动设置webhook失败,请手动访问',
         'change_reboot_php_worker' => '修改部分配置需要重启[supervisor]或php进程管理工具才会生效，例如邮件服务，server酱等。',
         'bot_system_setting_error' => '机器人设置错误！',
     ]

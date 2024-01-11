@@ -18,22 +18,27 @@ class SystemSetting extends Form
     public function handle(array $input)
     {
         Cache::put('system-setting', $input);
-        if(in_array("bottoken",$input)){
-            $getme = json_decode(file_get_contents("https://api.telegram.org/bot".$input["bottoken"]."/getme"),true);
-            //dump($getme);
-            if(!$getme["ok"]){
-                return $this
-                    ->response()
-                    ->success(admin_trans('system-setting.rule_messages.bot_system_setting_error'));
+        $string = "";
+        if(in_array("bottoken",$input)) {
+            try {
+                $getme = json_decode(file_get_contents("https://api.telegram.org/bot" . $input["bottoken"] . "/getme"), true);
+                //dump($getme);
+                if (!$getme["ok"]) {
+                    return $this
+                        ->response()
+                        ->success(admin_trans('system-setting.rule_messages.bot_system_setting_error'));
+                }
+                //删除webhook
+                file_get_contents("https://api.telegram.org/bot" . $input["bottoken"] . "/deletewebhook");
+                //重新设置webhook
+                file_get_contents("https://api.telegram.org/bot" . $input["bottoken"] . "/setwebhook?url=" . env("APP_URL") . "/webhook");
+            }catch(\ErrorException $e){
+                $string = admin_trans("system-setting.rule_messages.set_webhook_error").":https://api.telegram.org/bot" . $input["bottoken"] . "/setwebhook?url=" . env("APP_URL") . "/webhook";
             }
-            //删除webhook
-            file_get_contents("https://api.telegram.org/bot".$input["bottoken"]."/deletewebhook");
-            //重新设置webhook
-            file_get_contents("https://api.telegram.org/bot".$input["bottoken"]."/setwebhook?url=".env("APP_URL")."/webhook");
         }
         return $this
 				->response()
-				->success(admin_trans('system-setting.rule_messages.save_system_setting_success'));
+				->success(admin_trans('system-setting.rule_messages.save_system_setting_success').$string);
     }
 
     /**
@@ -104,12 +109,23 @@ class SystemSetting extends Form
         $this->tab(admin_trans('system-setting.labels.botset'), function () {
             $this->text('bottoken', admin_trans('system-setting.fields.bottoken'));
             $this->text('huilv', admin_trans('system-setting.fields.huilv'));
-            $this->text('token', admin_trans('system-setting.fields.token'));
+            $this->text('imgapi', admin_trans('system-setting.fields.imgapi'));
+        });
+        $this->tab(admin_trans('system-setting.labels.prime'), function () {
+            $this->text('hash', admin_trans('system-setting.fields.hash'));
+            $this->text('cookie', admin_trans('system-setting.fields.cookie'));
+            $this->text('charge', admin_trans('system-setting.fields.charge'));
+            $this->text('apiurl', admin_trans('system-setting.fields.apiurl'));
+        });
+        $this->tab(admin_trans('system-setting.labels.license'), function () {
+            $this->text('licenses', admin_trans('system-setting.fields.licenses'));
+            $this->text('username', admin_trans('system-setting.fields.username'));
         });
         $this->confirm(
             admin_trans('dujiaoka.warning_title'),
             admin_trans('system-setting.rule_messages.change_reboot_php_worker')
         );
+
     }
 
     public function default()

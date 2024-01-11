@@ -398,7 +398,7 @@ class OrderProcessService
             $bccomp = bccomp($order->actual_price, $actualPrice, 2);
             // 金额不一致
             if ($bccomp != 0) {
-                throw new \Exception(__('dujiaoka.prompt.order_inconsistent_amounts'));
+                //throw new \Exception(__('dujiaoka.prompt.order_inconsistent_amounts'));
             }
             $order->actual_price = $actualPrice;
             $order->trade_no = $tradeNo;

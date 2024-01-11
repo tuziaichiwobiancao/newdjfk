@@ -117,6 +117,7 @@ class CarmisController extends AdminController
      */
     public function importCarmis(Content $content)
     {
+        //dd($content);
         return $content
             ->title(admin_trans('carmis.fields.import_carmis'))
             ->body(new Card(new ImportCarmis()));

@@ -1,0 +1,23 @@
+{
+    "name": "imnotjames/curlfile-compat",
+    "description": "Compatibility library with CURLFile from PHP 5.5",
+    "version": "0.0.1",
+    "keywords": ["curl", "file upload", "curlfile"],
+    "homepage": "https://github.com/imnotjames/curlfile-compat",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Ward",
+            "email": "james@notjam.es",
+            "homepage": "http://notjam.es/"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "files": ["src/imnotjames/CURLFile.php", "src/CURLFile.php"]
+    }
+}

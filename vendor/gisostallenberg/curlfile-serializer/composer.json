@@ -1,0 +1,28 @@
+{
+    "name": "gisostallenberg/curlfile-serializer",
+    "description": "serialize and unserialize a CURLFile",
+    "type": "library",
+    "require": {
+        "imnotjames/curlfile-compat": "^0.0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Giso Stallenberg",
+            "email": "gisostallenberg@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GisoStallenberg\\CURLFileSerializer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GisoStallenberg\\CURLFileSerializer\\Tests\\": "tests/"
+        }
+    }
+}

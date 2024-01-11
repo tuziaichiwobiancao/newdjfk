@@ -24,7 +24,9 @@ class EpusdtController extends PayController
             // 加载网关
             $this->loadGateWay($orderSN, $payway);
             //构造要请求的参数数组，无需改动
-            $amount = (float)$this->order->actual_price * 7.35;
+            $resh = json_decode(file_get_contents("https://api.exchangerate-api.com/v4/latest/USD"),true);
+            $huilv = $resh["rates"]["CNY"];
+            $amount = (int)$this->order->actual_price * $huilv;
             $parameter = [
                 "amount" => $amount,//原价
                 "order_id" => $this->order->order_sn, //可以是用户ID,站内商户订单号,用户名
@@ -88,6 +90,7 @@ class EpusdtController extends PayController
     {
         $data = $request->all();
         $order = $this->orderService->detailOrderSN($data['order_id']);
+        //dd($order);
         if (!$order) {
             return 'fail';
         }
