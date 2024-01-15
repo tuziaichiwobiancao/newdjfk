@@ -55,7 +55,7 @@ class EpusdtController extends PayController
                 "money" => $body["data"]["actual_amount"],      //美金金额
                 "token" => $body["data"]["token"],              //支付token或链接
                 "amount" => $body["data"]["amount"],            //RMB金额
-                "image" => "https://v.api.aa1.cn/api/api-qrcode/sc.php?text=".$body["data"]["token"]."&size=180",
+                "image" => dujiaoka_config_get("imgapi").$body["data"]["token"]."&size=180",
             ];
             return $arr;
         } catch (RuleValidationException $exception) {

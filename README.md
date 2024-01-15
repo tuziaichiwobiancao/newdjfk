@@ -17,6 +17,8 @@
 
 在项目根目录下/ton/.env配置好ton助记词
 
+修复epusdt支付不出马的问题
+
 在宝塔的软件商店进程守护管理器，执行./ton/main即可，在后台自助开通会员处的api填写http://127.0.0.1:8888
 
 - 联系客服TG:https://t.me/buzhiguiqi
