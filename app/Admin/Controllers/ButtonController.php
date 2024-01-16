@@ -69,10 +69,10 @@ class ButtonController extends AdminController
             $form->text('tips');
             $form->text('keyword');
             $form->text('func');
-            $form->text('content');
+            $form->textarea('content');
             $form->text('parse');
             $form->text('disable');
-            $form->text('button');
+            $form->textarea('button');
             $form->text('addtime');
         });
     }
