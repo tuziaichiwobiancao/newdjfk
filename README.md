@@ -11,6 +11,12 @@
 - 授权购买地址:https://faka.oo-uu.cc
 - 演示机器人: https://t.me/fksqBot
 
+- 更新说明:2.0.5.01
+
+新增网页使用TGID@qq.com联系方式可使用余额支付，同时TG也会发送文件给用户，前提是该用户已经发送/start给机器人，没有拉黑停用机器人
+
+修复机器人余额支付的问题
+
 - 自助开通会员教程
 
 获取hash和cookie教程:https://www.oo-uu.cc/ask/219.html 右下角点击显示全部即可全部展示
