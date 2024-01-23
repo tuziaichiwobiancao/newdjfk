@@ -10,6 +10,7 @@
 - 安装好ssl
 - 授权购买地址:https://faka.oo-uu.cc
 - 演示机器人: https://t.me/fksqBot
+- 演示后台:https://dujiao.hyperindex.tk/admin  账号:admin    密码:admin
 
 - 更新说明:2.0.5.01
 
