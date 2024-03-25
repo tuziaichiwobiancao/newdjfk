@@ -2,7 +2,7 @@
 
 2024、3、25更新账号tdata、session、json、2FA一键打包工具
 
-
+![演示图片](https://github.com/tuziaichiwobiancao/newdjfk/blob/main/public/Snipaste_2024-03-25_16-48-18.png "演示图片")
 
 本机器人重新定价,2.0.5.07依旧免费(帮忙搭建50U,没有售后,没有更新)
 
