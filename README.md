@@ -26,7 +26,7 @@
 
 相比骗子的2.0.5.07版本修复了下列功能的6，7，8，9，10，12的功能，新增后台发布公告多行,自定义图片,自定义按钮,该版本已取消授权,不再需要安装swoole_loader，但必须是php7.4
 
-免费授权码:  https://t.me/+v16BXiiwU4U5ZjEx  进此群组@群主获取授权码免费的  那个叼毛卖150U的   这边免费  还有详细的搭建教程
+免费授权码:  https://t.me/openfaka  进此群组@群主获取授权码免费的  那个叼毛卖150U的   这边免费  还有详细的搭建教程
 
 免费版不支持更新，不支持一年技术支持
 
@@ -78,9 +78,9 @@
 
 https://bu-zhi-gui-qi.gitbook.io/untitled/
 
-- 演示机器人: https://t.me/fksqBot
+- 演示机器人: ttps://t.me/testkaifaBot
 
-- 演示后台:https://dujiao.kime.eu.org/admin  账号:admin    密码:admin
+- 演示后台:https://caonima.cl.kime.eu.org/admin  账号:admin    密码:admin
 
 - 更新说明:2.0.5.02  2024/1/23
 
